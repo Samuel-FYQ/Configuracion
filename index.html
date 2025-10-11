@@ -1,0 +1,82 @@
+<!-- Simulador de configuración electrónica por capas
+     Autor: Samuel López Melián -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Configuración Electrónica por Capas</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <h1>🧪 Configuración Electrónica por Capas</h1>
+  <p>Autor: <strong>Samuel López Melián</strong> &nbsp; ⚠️ La suma de electrones debe coincidir con Z</p>
+
+  <div id="contenedor-principal">
+    <div id="orbitales-panel">
+      <h2>Orbitales disponibles</h2>
+
+      <div id="orbitales">
+        <div class="orbital-fila">
+          <div class="orbital tipo-s" draggable="true" title="Máximo: 2 electrones">1s</div>
+        </div>
+        <div class="orbital-fila">
+          <div class="orbital tipo-s" draggable="true" title="Máximo: 2 electrones">2s</div>
+          <div class="orbital tipo-p" draggable="true" title="Máximo: 6 electrones">2p</div>
+        </div>
+        <div class="orbital-fila">
+          <div class="orbital tipo-s" draggable="true" title="Máximo: 2 electrones">3s</div>
+          <div class="orbital tipo-p" draggable="true" title="Máximo: 6 electrones">3p</div>
+          <div class="orbital tipo-d" draggable="true" title="Máximo: 10 electrones">3d</div>
+        </div>
+        <div class="orbital-fila">
+          <div class="orbital tipo-s" draggable="true" title="Máximo: 2 electrones">4s</div>
+          <div class="orbital tipo-p" draggable="true" title="Máximo: 6 electrones">4p</div>
+          <div class="orbital tipo-d" draggable="true" title="Máximo: 10 electrones">4d</div>
+          <div class="orbital tipo-f" draggable="true" title="Máximo: 14 electrones">4f</div>
+        </div>
+        <div class="orbital-fila">
+          <div class="orbital tipo-s" draggable="true" title="Máximo: 2 electrones">5s</div>
+          <div class="orbital tipo-p" draggable="true" title="Máximo: 6 electrones">5p</div>
+          <div class="orbital tipo-d" draggable="true" title="Máximo: 10 electrones">5d</div>
+          <div class="orbital tipo-f" draggable="true" title="Máximo: 14 electrones">5f</div>
+        </div>
+        <div class="orbital-fila">
+          <div class="orbital tipo-s" draggable="true" title="Máximo: 2 electrones">6s</div>
+          <div class="orbital tipo-p" draggable="true" title="Máximo: 6 electrones">6p</div>
+          <div class="orbital tipo-d" draggable="true" title="Máximo: 10 electrones">6d</div>
+        </div>
+        <div class="orbital-fila">
+          <div class="orbital tipo-s" draggable="true" title="Máximo: 2 electrones">7s</div>
+          <div class="orbital tipo-p" draggable="true" title="Máximo: 6 electrones">7p</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="actividad-panel">
+      <div id="grupo-selector">
+        <button onclick="mostrarGrupo(0)">1–4</button>
+        <button onclick="mostrarGrupo(1)">5–8</button>
+        <button onclick="mostrarGrupo(2)">9–12</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Elemento</th>
+            <th>Configuración</th>
+            <th>Acciones</th>
+            <th>Resultado</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-body"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <audio id="sound-ok" src="correcto.mp3" preload="auto"></audio>
+  <audio id="sound-error" src="error.mp3" preload="auto"></audio>
+
+  <script src="configuracion.js"></script>
+</body>
+</html>
