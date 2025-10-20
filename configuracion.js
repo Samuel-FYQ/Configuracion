@@ -9,14 +9,12 @@ const elementos = [
   { simbolo: "N", Z: 7, config: ["1s2", "2s2", "2p3"] },
   { simbolo: "Na", Z: 11, config: ["1s2", "2s2", "2p6", "3s1"] },
   { simbolo: "P", Z: 15, config: ["1s2", "2s2", "2p6", "3s2", "3p3"] },
+  { simbolo: "S", Z: 16, config: ["1s2", "2s2", "2p6", "3s2", "3p4"] },
   { simbolo: "Ar", Z: 18, config: ["1s2", "2s2", "2p6", "3s2", "3p6"] },
   { simbolo: "Ca", Z: 20, config: ["1s2", "2s2", "2p6", "3s2", "3p6", "4s2"] },
-  { simbolo: "Cr", Z: 24, config: ["1s2", "2s2", "2p6", "3s2", "3p6", "4s1", "3d5"] },
+  { simbolo: "Ti", Z: 22, config: ["1s2", "2s2", "2p6", "3s2", "3p6", "4s2", "3d2"] },
   { simbolo: "Zn", Z: 30, config: ["1s2", "2s2", "2p6", "3s2", "3p6", "4s2", "3d10"] },
-  { simbolo: "Br", Z: 35, config: ["1s2", "2s2", "2p6", "3s2", "3p6", "4s2", "3d10", "4p5"] },
-  { simbolo: "Zr", Z: 40, config: ["1s2", "2s2", "2p6", "3s2", "3p6", "4s2", "3d10", "4p6", "5s2", "4d2"] },
-  { simbolo: "Ag", Z: 47, config: ["1s2", "2s2", "2p6", "3s2", "3p6", "4s2", "3d10", "4p6", "5s1", "4d10"] },
-  { simbolo: "I", Z: 53, config: ["1s2", "2s2", "2p6", "3s2", "3p6", "4s2", "3d10", "4p6", "5s2", "4d10", "5p5"] }
+  { simbolo: "Br", Z: 35, config: ["1s2", "2s2", "2p6", "3s2", "3p6", "4s2", "3d10", "4p5"] }
 ];
 
 function mostrarGrupo(grupoIndex) {
@@ -24,7 +22,7 @@ function mostrarGrupo(grupoIndex) {
   tbody.innerHTML = "";
 
   const inicio = grupoIndex * 4;
-  const fin = inicio + 4;
+  const fin = Math.min(inicio + 4, elementos.length);
 
   for (let i = inicio; i < fin; i++) {
     const el = elementos[i];
